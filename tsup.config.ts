@@ -2,11 +2,13 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
   entry: ["src/server.ts"],
-  format: ["esm", "cjs"], // Keep this as ESM
+  format: ["esm"], // Keep this as ESM
   target: "esnext",
   outDir: "dist",
   clean: true,
   bundle: true,
+  external: ["@prisma/client", "prisma"],
+  noExternal: [/^((?!@prisma\/client|prisma).)*$/],
   splitting: false,
   sourcemap: true,
   // Add this banner to shim require() for CJS dependencies
