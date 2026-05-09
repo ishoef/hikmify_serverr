@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { bookingController } from "./booking.controller";
-import authMiddleware from "../../middleware/authMiddleware";
-import { UserRole } from "../../utils/enums";
+import { bookingController } from "./booking.controller.js";
+import authMiddleware from "../../middleware/authMiddleware.js";
+import { UserRole } from "../../utils/enums.js";
 
 const router = Router();
 

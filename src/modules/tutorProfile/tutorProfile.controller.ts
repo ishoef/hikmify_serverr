@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { tutorProfileService } from "./tutorProfile.service";
+import { tutorProfileService } from "./tutorProfile.service.js";
 
 // CREATE tutor profile
 const createTutorProfile = async (req: Request, res: Response) => {

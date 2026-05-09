@@ -1,7 +1,7 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
-import { prisma } from "./prisma";
-import { UserRole, UserStatus } from "../utils/enums";
+import { prisma } from "./prisma.js";
+import { UserRole, UserStatus } from "../utils/enums.js";
 
 // If your Prisma file is located elsewhere, you can change the path
 

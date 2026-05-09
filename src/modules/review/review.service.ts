@@ -1,8 +1,8 @@
 import isEqual from "lodash.isequal";
-import { prisma } from "../../lib/prisma";
-import { User } from "../../types/types";
-import { UserRole } from "../../utils/enums";
-import { BookingStatus, Review } from "../../generated/client";
+import { prisma } from "../../lib/prisma.js";
+import { User } from "../../types/types.js";
+import { UserRole } from "../../utils/enums.js";
+import { BookingStatus, Review } from "../../generated/client.js";
 
 // CREATE review
 const createReview = async (data: Review, user: User) => {

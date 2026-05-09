@@ -1,4 +1,4 @@
-import { BookingStatus } from "../generated/enums";
+import { BookingStatus } from "../generated/enums.js";
 
 export interface User {
   id: string;

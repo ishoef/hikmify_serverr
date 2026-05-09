@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
-import { auth } from "../lib/auth";
-import { UserRole } from "../utils/enums";
+import { auth } from "../lib/auth.js";
+import { UserRole } from "../utils/enums.js";
 
 declare global {
   namespace Express {

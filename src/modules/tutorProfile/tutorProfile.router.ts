@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { tutorProfileController } from "./tutorProfile.controller";
-import authMiddleware from "../../middleware/authMiddleware";
-import { UserRole } from "../../utils/enums";
+import { tutorProfileController } from "./tutorProfile.controller.js";
+import authMiddleware from "../../middleware/authMiddleware.js";
+import { UserRole } from "../../utils/enums.js";
 
 const router = Router();
 

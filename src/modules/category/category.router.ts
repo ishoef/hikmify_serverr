@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { categoryController } from "./category.controller";
-import authMiddleware from "../../middleware/authMiddleware";
-import { UserRole } from "../../utils/enums";
+import { categoryController } from "./category.controller.js";
+import authMiddleware from "../../middleware/authMiddleware.js";
+import { UserRole } from "../../utils/enums.js";
 
 const router = Router();
 

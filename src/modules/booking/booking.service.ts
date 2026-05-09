@@ -1,8 +1,8 @@
 import isEqual from "lodash.isequal";
-import { prisma } from "../../lib/prisma";
-import { BookingData, User } from "../../types/types";
-import { UserRole } from "../../utils/enums";
-import { parseTime } from "../../utils/parseTime";
+import { prisma } from "../../lib/prisma.js";
+import { BookingData, User } from "../../types/types.js";
+import { UserRole } from "../../utils/enums.js";
+import { parseTime } from "../../utils/parseTime.js";
 
 // CREATE booking (only user can create a booking)
 const createBooking = async (data: BookingData, user: User) => {
