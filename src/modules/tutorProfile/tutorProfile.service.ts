@@ -34,7 +34,7 @@ const createTutorProfile = async (data: TutorProfile, user: User) => {
     };
   }
 
-  const createdTutorProfile = await prisma.$transaction(async (tx) => {
+  const createdTutorProfile = await prisma.$transaction(async (tx: any) => {
     const result = await tx.tutor.create({
       data: {
         ...data,
@@ -62,25 +62,6 @@ const createTutorProfile = async (data: TutorProfile, user: User) => {
 
     return result;
   });
-
-  // const createdTutorProfile = await prisma.tutor.findUnique({
-  //   where: {
-  //     id: finalResult.id,
-  //   },
-  //   include: {
-  //     user: {
-  //       select: {
-  //         name: true,
-  //         email: true,
-  //         role: true,
-  //         image: true,
-  //         phone: true,
-  //       },
-  //     },
-  //   },
-  // });
-
-  // console.log("final prifle check", finalProfile);
 
   return {
     success: true,
@@ -148,7 +129,7 @@ const getOwnTutorProfile = async (userId: string) => {
 
 // get single profile by id
 const getSingleTutorProfile = async (profileId: string) => {
-  const result = await prisma.$transaction(async (tx) => {
+  const result = await prisma.$transaction(async (tx: any) => {
     await tx.tutor.update({
       where: {
         id: profileId,
